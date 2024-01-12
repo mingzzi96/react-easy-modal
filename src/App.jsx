@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <h1>vite react project</h1>
-      <h2>Let&apos;s make modal pop up on this page</h2>
+      <h2>Let&apos;s implement a modal feature on this page!</h2>
       <button onClick={handleModalOpenClick} type='button'>
         모달 창 열기
       </button>
