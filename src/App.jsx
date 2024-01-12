@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import ModalDim from './components/Modal/ModalDim';
+import ModalLayout from './components/Modal/ModalLayout';
+import ChangeNameModal from './components/Modal/ChangeNameModal';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,7 +15,9 @@ function App() {
       <button onClick={handleModalOpenClick} type='button'>
         모달 창 열기
       </button>
-      <ModalDim isOpen={isModalOpen} closeModal={handleModalCloseClick} />
+      <ModalLayout isOpen={isModalOpen} closeModal={handleModalCloseClick} modalTitle='폴더 이름 변경'>
+        <ChangeNameModal />
+      </ModalLayout>
     </>
   );
 }
