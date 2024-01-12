@@ -1,8 +1,5 @@
-# React + Vite
+# React + Vite 환경에서 간단한 모달 만들기 연습
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 실행법
+1. npm install로 package.json 을 모두 설치합니다.
+2. npm run dev로 실행합니다.
