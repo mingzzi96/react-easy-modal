@@ -13,9 +13,9 @@ function App() {
       <h1>vite react project</h1>
       <h2>Let&apos;s implement a modal feature on this page!</h2>
       <button onClick={handleModalOpenClick} type='button'>
-        모달 창 열기
+        Open Modal
       </button>
-      <ModalLayout isOpen={isModalOpen} closeModal={handleModalCloseClick} modalTitle='폴더 이름 변경'>
+      <ModalLayout isOpen={isModalOpen} closeModal={handleModalCloseClick} modalTitle='Rename Folder'>
         <ChangeNameModal />
       </ModalLayout>
     </>

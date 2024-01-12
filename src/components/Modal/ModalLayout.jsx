@@ -40,7 +40,7 @@ const ModalLayout = ({ children, isOpen, closeModal, modalTitle }) => {
       <StyledModalDim style={{ display: isOpen ? 'flex' : 'none' }}>
         <StyledModalContent>
           <StyledModalContentCloseButton type='button' onClick={closeModal}>
-            닫기 버튼입니다.
+            Close
           </StyledModalContentCloseButton>
           <StyledModalContentTitle>{modalTitle}</StyledModalContentTitle>
           {children}
