@@ -6,7 +6,10 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleModalOpenClick = () => setIsModalOpen(true);
-  const handleModalCloseClick = () => setIsModalOpen(false);
+
+  const handleModalCloseClick = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <>
@@ -15,9 +18,11 @@ function App() {
       <button onClick={handleModalOpenClick} type='button'>
         Open Modal
       </button>
-      <ModalLayout isOpen={isModalOpen} closeModal={handleModalCloseClick} modalTitle='Rename Folder'>
-        <ChangeNameModal />
-      </ModalLayout>
+      {isModalOpen ? (
+        <ModalLayout closeModal={handleModalCloseClick} modalTitle='Rename Folder'>
+          <ChangeNameModal />
+        </ModalLayout>
+      ) : null}
     </>
   );
 }

@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+const StyledModalWrap = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 const StyledModalDim = styled.div`
   position: fixed;
   top: 0;
@@ -7,10 +18,7 @@ const StyledModalDim = styled.div`
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
-  z-index: 999999;
-  display: none;
-  align-items: center;
-  justify-content: center;
+  z-index: 99;
 `;
 
 const StyledModalContent = styled.div`
@@ -19,6 +27,7 @@ const StyledModalContent = styled.div`
   border-radius: 15px;
   border: 1px solid #ccd5e3;
   padding: 32px 40px;
+  z-index: 999;
 `;
 
 const StyledModalContentTitle = styled.h2`
@@ -34,10 +43,11 @@ const StyledModalContentCloseButton = styled.button`
   top: 16px;
 `;
 
-const ModalLayout = ({ children, isOpen, closeModal, modalTitle }) => {
+const ModalLayout = ({ children, closeModal, modalTitle }) => {
   return (
     <>
-      <StyledModalDim style={{ display: isOpen ? 'flex' : 'none' }}>
+      <StyledModalWrap>
+        <StyledModalDim onClick={closeModal} />
         <StyledModalContent>
           <StyledModalContentCloseButton type='button' onClick={closeModal}>
             Close
@@ -45,7 +55,7 @@ const ModalLayout = ({ children, isOpen, closeModal, modalTitle }) => {
           <StyledModalContentTitle>{modalTitle}</StyledModalContentTitle>
           {children}
         </StyledModalContent>
-      </StyledModalDim>
+      </StyledModalWrap>
     </>
   );
 };
